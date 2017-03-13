@@ -13,6 +13,7 @@
 		938518811E764C6C00B82524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9385187F1E764C6C00B82524 /* Main.storyboard */; };
 		938518831E764C6C00B82524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938518821E764C6C00B82524 /* Assets.xcassets */; };
 		938518861E764C6C00B82524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938518841E764C6C00B82524 /* LaunchScreen.storyboard */; };
+		9385188F1E764C9300B82524 /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9385188E1E764C9300B82524 /* HTTPService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		938518821E764C6C00B82524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		938518851E764C6C00B82524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		938518871E764C6C00B82524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9385188D1E764C9300B82524 /* HTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
+		9385188E1E764C9300B82524 /* HTTPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				938518841E764C6C00B82524 /* LaunchScreen.storyboard */,
 				938518871E764C6C00B82524 /* Info.plist */,
 				938518761E764C6C00B82524 /* Supporting Files */,
+				9385188D1E764C9300B82524 /* HTTPService.h */,
+				9385188E1E764C9300B82524 /* HTTPService.m */,
 			);
 			path = TutorialOBJC;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9385187E1E764C6C00B82524 /* ViewController.m in Sources */,
+				9385188F1E764C9300B82524 /* HTTPService.m in Sources */,
 				9385187B1E764C6C00B82524 /* AppDelegate.m in Sources */,
 				938518781E764C6C00B82524 /* main.m in Sources */,
 			);
