@@ -39,7 +39,7 @@
                 completionHandler(json,nil);
                 
             }else{
-                completionHandler(nil, @"Data currupt! Plz try agåain.");
+                completionHandler(nil, @"Data currupt! Plz try again.");
             }
         }else{
             NSLog(@"Network Err: %@",error.debugDescription);

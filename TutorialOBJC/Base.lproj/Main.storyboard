@@ -31,9 +31,9 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AyE-du-NMc">
                                 <rect key="frame" x="16" y="34" width="288" height="514"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="vDP-vP-jUM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="main" rowHeight="90" id="vDP-vP-jUM" customClass="VideoCell">
                                         <rect key="frame" x="0.0" y="28" width="288" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vDP-vP-jUM" id="3FA-Ex-Npq">
@@ -52,7 +52,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Devslopes - Standup" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXb-5l-z6l">
                                                             <rect key="frame" x="125" y="9" width="156" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -64,7 +64,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.52033390410958902" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="MAT-a8-WcL" secondAttribute="bottom" constant="5" id="2Rx-F0-wlD"/>
                                                         <constraint firstItem="MAT-a8-WcL" firstAttribute="leading" secondItem="6Tn-DM-KPN" secondAttribute="leading" constant="5" id="DpT-Mx-zj1"/>
@@ -72,7 +72,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="6Tn-DM-KPN" firstAttribute="top" secondItem="3FA-Ex-Npq" secondAttribute="top" constant="4" id="MmH-bN-9n2"/>
                                                 <constraint firstItem="6Tn-DM-KPN" firstAttribute="leading" secondItem="3FA-Ex-Npq" secondAttribute="leading" constant="4" id="aU3-xm-FiJ"/>
@@ -80,6 +80,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="6Tn-DM-KPN" secondAttribute="bottom" constant="3" id="rGg-eS-ik3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellView" destination="6Tn-DM-KPN" id="NX0-1u-Sxm"/>
+                                            <outlet property="descLbl" destination="4NE-yy-6p8" id="tkc-Kr-81Y"/>
+                                            <outlet property="thumbImg" destination="MAT-a8-WcL" id="H0l-KB-WvC"/>
+                                            <outlet property="titleLable" destination="FXb-5l-z6l" id="2Xi-Jo-Awy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -96,6 +102,9 @@
                             <constraint firstItem="AyE-du-NMc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="qxx-Qw-yWw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="AyE-du-NMc" id="PGb-sE-hZZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
