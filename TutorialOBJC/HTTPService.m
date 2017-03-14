@@ -7,6 +7,8 @@
 //
 
 #import "HTTPService.h"
+#define URL_BASE "http://localhost:6069"
+#define URL_TUTORIAL "/tutorials"
 
 @implementation HTTPService
 +(id) instance
@@ -21,5 +23,29 @@
 -(void) test
 {
     NSLog(@"This is test");
+}
+//
+-(void) getTutorials:(nullable onComplete)completionHandler
+{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%s%s",URL_BASE,URL_TUTORIAL]];
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (data !=nil)
+        {
+            NSError *err;
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+            if(err == nil)
+            {
+                completionHandler(json,nil);
+                
+            }else{
+                completionHandler(nil, @"Data currupt! Plz try agåain.");
+            }
+        }else{
+            NSLog(@"Network Err: %@",error.debugDescription);
+            completionHandler(nil, @"Problem connecting to the server.");
+        }
+        
+    }] resume];
 }
 @end

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HTTPService.h"
+
 @interface ViewController ()
 
 @end
@@ -17,7 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    [[HTTPService alloc]test];
+//    [[HTTPService alloc]test];
+   // [[HTTPService alloc]getTutorials];
+    [[HTTPService instance] getTutorials:^(NSDictionary * _Nullable dataDict, NSError * _Nullable errMessage) {
+        if (dataDict) {
+            NSLog(@"Dictionary : %@",dataDict.debugDescription);
+            
+        }else if (errMessage){
+            NSLog(@"Alert : %@", errMessage.debugDescription);
+        }
+    }];
 }
 
 

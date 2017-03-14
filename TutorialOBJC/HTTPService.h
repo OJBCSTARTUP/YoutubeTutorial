@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^onComplete)(NSDictionary * __nullable dataDict,NSError * __nullable errMessage);
+
 @interface HTTPService : NSObject
 //static shareInstance
 +(id) instance;
 -(void) test;
+-(void)getTutorials:(nullable onComplete)completionHandler;
 @end
