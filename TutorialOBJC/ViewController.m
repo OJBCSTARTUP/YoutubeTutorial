@@ -38,9 +38,9 @@
             for(NSDictionary *d in dataArray){
                 Video *vid = [[Video alloc]init];
                 vid.videoTitle = [d objectForKey:@"title"];
-                vid.videoDescription = [d objectForKey:@"description"];
+                vid.videoDescription = [d objectForKey:@"discription"];
                 vid.thumbnailUrl = [d objectForKey:@"thumbnail"];
-                vid.videoIframe = [d objectForKey:@"iframe"];
+                vid.videoIframe = [d objectForKey:@"iframed"];
                 [arr addObject:vid];
             }
             self.videoList = arr;
@@ -61,6 +61,7 @@
 -(UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     VideoCell *cell = (VideoCell*)[tableView dequeueReusableCellWithIdentifier:@"main"];
+    
     if(!cell){
         cell = [[VideoCell alloc]init];
     }
@@ -81,7 +82,9 @@
 {
     return self.videoList.count;
 }
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+}
 
 
 

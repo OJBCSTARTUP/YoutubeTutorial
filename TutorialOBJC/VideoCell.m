@@ -30,8 +30,8 @@
 
 
 -(void)updateUI:(nullable Video*)video{
-    self.titleLable = video.videoTitle;
-    self.descLbl = video.videoDescription;
+    self.titleLable.text = video.videoTitle;
+    self.descLbl.text = video.videoDescription;
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:video.thumbnailUrl]]];
     self.thumbImg.image = image;
     

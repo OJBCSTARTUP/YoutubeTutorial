@@ -37,7 +37,7 @@
             if(err == nil)
             {
                 completionHandler(json,nil);
-                
+                NSLog(@"Data:%@",json);
             }else{
                 completionHandler(nil, @"Data currupt! Plz try again.");
             }
